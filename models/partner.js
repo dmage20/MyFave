@@ -102,6 +102,12 @@ const partnerSchema = mongoose.Schema({
         type: String
     }
 })
+
+partnerSchema.virtual('offers', {
+    ref: 'Offer',
+    localField: '_id',
+    foreignField: 'partner'
+})
 const Partner = mongoose.model('Partner', partnerSchema )
 
 module.exports = Partner
