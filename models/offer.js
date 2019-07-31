@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const offerSchema = mongoose.Schema({
     partner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'partner'
+        ref: 'Partner'
       },
     payment_gateways: [
         {
