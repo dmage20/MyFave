@@ -3,17 +3,15 @@ import React, {useEffect, Fragment} from 'react'
 import {connect} from 'react-redux'
 import { getPartners} from '../actions/partner'
 import Spinner from './Spinner'
+import PartnerList from './PartnerList'
 
 const  Landing = ({partner:{ partners, loading}, getPartners}) =>{
     useEffect(()=>{
         getPartners()
     },[])
     return loading && partners.length === 0 ? <Spinner /> : <Fragment>
-        <h1 className="large text-primary">Landing</h1>
-        <p className="lead" >
-        <i className="fas fa-user"></i> Welcome 
-        </p>
-    
+        <h1 className="large text-primary">Partners Page</h1>
+        <PartnerList />
     </Fragment>
 }
 
