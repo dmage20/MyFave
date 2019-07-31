@@ -4,6 +4,8 @@ const Partner = require('../../models/partner')
 const Offer = require('../../models/offer')
 const mongoose = require('mongoose')
 // get all partners
+// options:
+// ?limit=3&category=eat
 router.get('/api/partners', async (req, res)=>{
     categories = ["eat", "beauty", "massage", "activity", "kid", "fit", "service", "travel"]
     options = {}
