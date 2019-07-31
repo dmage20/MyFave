@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://taskapp:DeliaP1962@cluster0-fll7a.mongodb.net/test?retryWrites=true&w=majority",
+    "tokenKey": "suchislife"
+}
