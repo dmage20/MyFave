@@ -1,0 +1,3 @@
+export const GET_PARTNERS ='GET_PROFILE'
+export const PARTNER_ERROR = 'PROFILE_ERROR'
+export const CLEAR_PARTNERS = 'CLEAR_PARTNERS'
