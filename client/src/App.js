@@ -3,10 +3,10 @@ import React, {
   Fragment 
  } from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Landing from './components/Landing'
-
+import Offers from './components/Offers'
 // Redux------------------
 import { Provider } from 'react-redux'
 import store from './store'
@@ -19,7 +19,10 @@ const App = ()=> {
       <Router>
         <Fragment>
         <Navbar />
-        <Route exact path='/' component={Landing} />
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route exact path='/partners/:name' component={Offers}/>
+        </Switch>
           <section className='container'>
           </section>
         </Fragment>
