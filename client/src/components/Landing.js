@@ -7,7 +7,7 @@ import PartnerList from './PartnerList'
 
 const  Landing = ({partner:{ partners, loading, skip, count}, getPartners}) => {
     useEffect(()=>{
-        getPartners()
+        getPartners(skip)
     },[])
     return loading && partners.length === 0 ? <Spinner /> : <Fragment>
         <h1 className="large text-primary">Partners Page</h1>
@@ -24,6 +24,12 @@ const  Landing = ({partner:{ partners, loading, skip, count}, getPartners}) => {
             return (getPartners(skip + 23))
           }}
            className="button">Next Page
+        </button>
+        <button       
+        onClick={(e) => {
+            return (getPartners())
+          }}
+           className="button">First Page
         </button>
         <PartnerList />
     </Fragment>
