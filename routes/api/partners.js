@@ -18,8 +18,13 @@ router.get('/api/partners', async (req, res)=>{
         if( categories.includes(req.query.category) ) {
             filter.category = req.query.category
         }
+        if (req.query.skip){
+            options.skip = parseInt(req.query.skip)
+        }
         partners = await Partner.find(filter,null,options)
-        res.send(partners)
+        count = await Partner.countDocuments({})
+   
+        res.send({partners, count: count})
     }catch(e){
         res.status(400).send(e)
     }
