@@ -18,4 +18,3 @@ export const getPartners = (skip = 0) => async dispatch =>{
         })
     }
 }
-

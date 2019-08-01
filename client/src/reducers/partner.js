@@ -1,4 +1,4 @@
-import { GET_PARTNERS, PARTNER_ERROR, CLEAR_PARTNERS } from '../actions/types'
+import { GET_PARTNERS, PARTNER_ERROR, CLEAR_PARTNERS, START_PARTNERS } from '../actions/types'
 
 const initalState = {
     partners: [],
