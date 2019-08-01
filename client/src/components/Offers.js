@@ -9,7 +9,6 @@ const  Offers = (props) => {
    const {getOffers, history, location, match, offer:{loading,offers}} = props 
     useEffect(()=>{
         getOffers(match.params.name)
-        console.log(props)
     },[])
     return loading && offers.length === 0 ? <Spinner /> :  <Fragment>
         <h1 className="large text-primary">Offers Page</h1>
