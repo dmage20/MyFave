@@ -8,7 +8,7 @@ import OffersList from './OffersList'
 const  Offers = (props) => {
    const {getOffers, history, location, match, offer:{loading,offers}} = props 
     useEffect(()=>{
-        getOffers(match.params.name)
+        getOffers(match.params.company_id)
     },[])
     return loading && offers.length === 0 ? <Spinner /> :  <Fragment>
         <h1 className="large text-primary">Offers Page</h1>

@@ -21,7 +21,7 @@ const App = ()=> {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Landing} />
-          <Route exact path='/partners/:name' component={Offers}/>
+          <Route exact path='/offers/:company_id' component={Offers}/>
         </Switch>
           <section className='container'>
           </section>
