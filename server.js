@@ -1,13 +1,14 @@
 const express = require('express')
 const connectDB = require('./db/mongoose')
 const partnersRouter = require('./routes/api/partners')
+const offerRouter = require('./routes/api/offers')
 const path = require('path')
 
 const app = express()
 app.use(express.json())
 connectDB()
 app.use(partnersRouter)
-
+app.use(offerRouter)
 // serve static assets in production
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'))

@@ -4,7 +4,7 @@ import {GET_OFFERS, OFFERS_ERROR } from './types'
 
 export const getOffers= (partner) => async dispatch =>{
     try {
-        const res = await axios.get(`/api/partners/${partner}`)
+        const res = await axios.get(`/api/offers/${partner}`)
         dispatch({
             type: GET_OFFERS,
             partner: res.data.partner,
